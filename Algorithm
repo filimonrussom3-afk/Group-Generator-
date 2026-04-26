@@ -1,0 +1,38 @@
+ Start
+ Create a container for the interface
+ Display title “Group Generator”
+ Create a text area for entering names
+ Create an input box for group size
+ Create a button labeled “Generate”
+ Create an output area inside the container
+When the button is clicked:
+Read names from the text area
+ Split names by line into a list
+ Remove empty entries from the list
+Read group size
+If number of names = 0 then
+  Output “Please enter some names”
+  Stop
+ End if
+If group size ≤ 0 then
+  Output “Invalid group size”
+  Stop
+ End if
+Shuffle the list of names
+Set groups = empty list
+ Set i = 0
+While i < number of names do
+  Create a group from names i to i + group size
+  Add group to groups list
+  Increase i by group size
+ End while
+Set group number = 1
+For each group in groups do
+  Output “Group” and group number
+  Output all names in the group
+  Increase group number by 1
+ End for
+Display all groups inside the output area (inside the container)
+End
+
+
